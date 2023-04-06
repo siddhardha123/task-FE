@@ -1,6 +1,6 @@
 import React from 'react'
 import CustomInput from './shared/CustomInput'
-const StepOne = ({ jobData, handleInputChange, handleNext }) => {
+const StepOne = ({ jobData, handleInputChange, handleNext,errors}) => {
 
 
     return (
@@ -19,6 +19,9 @@ const StepOne = ({ jobData, handleInputChange, handleNext }) => {
                     value={jobData.title}
                     onChange={handleInputChange}
                 />
+                {errors.title && (
+    <span className="text-red-500">{errors.title}</span>
+    )}
             </div>
             <div className='flex-col justify-left space-y-1 '>
                 <p>Company name<span className='text-red-500'>*</span></p>
@@ -30,6 +33,9 @@ const StepOne = ({ jobData, handleInputChange, handleNext }) => {
                     value={jobData.company}
                     onChange={handleInputChange}
                 />
+                {errors.company && (
+    <span className="text-red-500">{errors.company}</span>
+    )}
             </div>
             <div className='flex-col justify-left space-y-1  '>
                 <p>Industry<span className='text-red-500'>*</span></p>
@@ -41,6 +47,9 @@ const StepOne = ({ jobData, handleInputChange, handleNext }) => {
                     value={jobData.industry}
                     onChange={handleInputChange}
                 />
+                {errors.industry && (
+    <span className="text-red-500">{errors.industry}</span>
+    )}
             </div>
             <div className='md:flex md:space-x-6'>
                 <div className='md:w-[50%] space-y-1 '>

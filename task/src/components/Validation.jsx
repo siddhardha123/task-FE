@@ -38,11 +38,11 @@ const JobForm = () => {
     if (!title) {
     nextErrors.title = 'Title is required';
     }
-    if (!description) {
-    nextErrors.description = 'Description is required';
+    if (!company) {
+    nextErrors.company = 'company is required';
     }
-    if (!location) {
-    nextErrors.location = 'Location is required';
+    if (!industry) {
+    nextErrors.industry = 'Industry is required';
     }
     if (Object.keys(nextErrors).length > 0) {
     setErrors(nextErrors);

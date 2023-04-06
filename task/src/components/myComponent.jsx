@@ -20,17 +20,14 @@ const MainComponent = () => {
          {
             "text" : "create Job",
             "action" : handleCreateJobClick,
-            "color" : "#1597E4"
         },
         {
             "text" : "Edit",
             "action" : handleEditClick,
-            "color" : "#1597E4"
         },
         {
             "text" : "Delete",
             "action" : handleDeleteClick,
-            "color" : "#1597E4"
         },
         
     ]
@@ -40,7 +37,7 @@ const MainComponent = () => {
         <div className='flex mt-3'>
             {ButtonConfig.map((data)=>(
                  <div className='mx-2'>
-                 <CustomButton props={data}/>
+                 <CustomButton props={data} style={"bg-blue-200"}/>
                  </div>
             ))}
 
