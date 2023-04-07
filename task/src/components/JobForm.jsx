@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useState} from 'react';
 import StepOne from './StepOne';
 import StepTwo from './StepTwo';
-import postData from '../apis/postData';
+import postJob from '../apis/postJob';
 const JobForm = () => {
     const [step, setStep] = useState(1);
     const [errors, setErrors] = useState({});
+   
     const [jobData, setJobData] = useState({
         title: '',
         company: '',
@@ -57,7 +58,7 @@ const JobForm = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(jobData)
-        postData(jobData).then(()=>{
+        postJob(jobData).then(()=>{
             console.log("data is sent")
             setJobData({
                 title: '',
@@ -79,7 +80,8 @@ const JobForm = () => {
 
     };
 
-
+    
+   
 
     return (
         <div className="fixed top-0 left-0 w-full h-full bg-gray-500 bg-opacity-50 flex items-center justify-center">
