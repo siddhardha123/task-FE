@@ -3,7 +3,7 @@ import './App.css';
 import MainComponent from './components/myComponent';
 function App() {
   return (
-    <div className="App">
+    <div className="App font-sans">
        <MainComponent />
     </div>
   );

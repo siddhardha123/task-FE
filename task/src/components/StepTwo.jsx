@@ -77,7 +77,7 @@ const StepTwo = ({jobData,handleRadioChange,handleSubmit,handleInputChange }) =>
                  <input
                     type="radio"
                     name="applyType"
-                    value="quickApply"
+                    value="Quick Apply"
                     onChange={handleRadioChange}
                     className='w-4'
                     required
@@ -90,7 +90,7 @@ const StepTwo = ({jobData,handleRadioChange,handleSubmit,handleInputChange }) =>
                 <input
                     type="radio"
                     name="applyType"
-                    value="externalApply"
+                    value="External Apply"
                     onChange={handleRadioChange}
                     className='w-4'
                     required
@@ -99,41 +99,7 @@ const StepTwo = ({jobData,handleRadioChange,handleSubmit,handleInputChange }) =>
                </div>
 
                 </div>
-                
-                
-                
             </div>
-            {/* <label className="font-bold"></label>
-             <label className="flex items-center space-x-2">
-                 
-            </label>
-            <label className="flex items-center space-x-2">
-               
-               
-            </label> */}
-
-
-            {/* <label className="font-bold" htmlFor="description">
-      Description:
-      <textarea
-        className="border border-gray-400 rounded px-3 py-2"
-        name="description"
-        value={jobData.description}
-        onChange={handleInputChange}
-        required
-      />
-    </label>
-    <label className="font-bold" htmlFor="location">
-      Location:
-      <input
-        className="border border-gray-400 rounded px-3 py-2"
-        type="text"
-        name="location"
-        value={jobData.location}
-        onChange={handleInputChange}
-        required
-      />
-    </label> */}
             <div className='md:flex md:justify-end'>
                 <button
                     className="bg-blue-500 text-white py-2 px-4 rounded md:mt-24 w-[100%] md:w-auto"

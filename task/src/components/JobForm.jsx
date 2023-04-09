@@ -2,7 +2,7 @@ import { useState} from 'react';
 import StepOne from './StepOne';
 import StepTwo from './StepTwo';
 import postJob from '../apis/postJob';
-const JobForm = () => {
+const JobForm = ({setIsFormOpen}) => {
     const [step, setStep] = useState(1);
     const [errors, setErrors] = useState({});
    
@@ -73,6 +73,9 @@ const JobForm = () => {
                 totalEmployees: '',
                 applyType: '' 
             })
+            setIsFormOpen(false);
+            window.location.reload();
+
 
         }).catch((err) =>{
              console.log(err)
@@ -84,9 +87,9 @@ const JobForm = () => {
    
 
     return (
-        <div className="fixed top-0 left-0 w-full h-full bg-gray-500 bg-opacity-50 flex items-center justify-center">
+        <div className="fixed top-0 left-0 w-full h-full bg-gray-500 bg-opacity-50 flex items-center justify-center " onClick={()=>{setIsFormOpen(false)}}>
             <div className="bg-white p-4 rounded-lg
-w-[90%]  md:w-1/2">
+w-[90%]  md:w-1/2" onClick={(e) => e.stopPropagation()} >
                 {step === 1 ? <StepOne jobData={jobData} handleInputChange={handleInputChange} handleNext={handleNext} errors={errors}/> :
                     <StepTwo jobData={jobData} handleRadioChange={handleRadioChange} handleSubmit={handleSubmit} handleInputChange={handleInputChange} />}
             </div>
